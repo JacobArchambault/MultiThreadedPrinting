@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
+﻿using System.Threading;
+using static System.Console;
 
 namespace MultiThreadedPrinting
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("*****Synchronizing Threads *****\n");
+            WriteLine("*****Synchronizing Threads *****\n");
 
             Printer p = new Printer();
 
@@ -27,7 +25,7 @@ namespace MultiThreadedPrinting
             // Now start each one.
             foreach (Thread t in threads)
                 t.Start();
-            Console.ReadLine();
+            ReadLine();
         }
     }
 }
